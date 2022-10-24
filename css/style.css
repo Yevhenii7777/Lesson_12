@@ -4,12 +4,12 @@
 	position: relative;
 }
 
-
+/* 
 body{
 	background-color: #333;
-}
+} */
 
-/*
+*/
 За допомогою 2D та 3D трансформації 
 ми зможемо зрушувати, повертати, масштабувати 
 елементи та робити багато іншого!
@@ -19,7 +19,7 @@ transform та її значеннями
 !!!!! НЕ ПРАЦЮЄ з рядковими об'єктами !!!!!!!!
 */
 
-.section {
+/* .section {
 	padding: 30px;
 }
 .section__body {
@@ -32,7 +32,7 @@ transform та її значеннями
 	height: 200px;
 	background-color: #7A956B;
 	background: url('../img/01.jpg') 0 0 / cover no-repeat;
-}
+} */
 
 /*
 translate (x, y)
@@ -42,7 +42,7 @@ translate (x, y)
 використовуючи координати X та Y. 
 Записується так translate (x,y).
 */
-.section__item {
+/* .section__item { */
 	/* transform: translate(20%,20%); */
 	/* transform: translateY() */
 	/* transform: translateX() */
@@ -52,46 +52,46 @@ translate (x, y)
 	top: 20%;
 	left: 20%;
 	*/
-}
+
 /*
 Scale (x, y)
 Масштабує елементи,
 роблячи їх більшими або меншими.
 */
-.section__item {
+/* .section__item { */
 	/* transform: scale(1); */
-}
+/* } */
 /*
 Rotate (n + deg)
 Повертає елементи.
 */
-.section__item {
+/* .section__item { */
 	/* transform: rotate(10deg); */
 	/*
 	transform: rotateY(50deg)
 	transform: rotateX(50deg)
 	*/
-}
+
 /*
 Skew (x + deg, y + deg)
 Деформує (нахиляє) елементи.
 */
-.section__item {
+/* .section__item { */
 	/* transform: skew(-10deg, 0deg); */
-}
+/* } */
 /*
 Matrix (a, c, b, d, x, y)
 Дозволяє об'єднати кілька функцій 2D-трансформацій в одній.
 */
-.section__item {
+/* .section__item { */
 	/* transform: matrix(1, 0, 0, 1, 0, 0); */
-}
+/* } */
 /*
 Множинні 2D трансформації
 */
-.section__item {
+/* .section__item { */
 	/* transform: translate(20%, 20%) scale(0.5) rotate(30deg) skew(20deg, 20deg); */
-}
+
 
 /*
 Transform-origin
@@ -99,12 +99,12 @@ Transform-origin
 щодо якого відбувається зміна 
 положення/розміру/форми елемента.
 */
-.section__item {
+/* .section__item { */
 	/* 
 	transform-origin: 0 0;
  	transform: rotate(20deg);
 	*/
-}
+/* } */
 
 /*
 Perspective,
@@ -113,18 +113,18 @@ perspective-origin
 точки початку координат.
 !! Задаються батьківському елементу!
 */
-.section__body {
+/* .section__body { */
 	/*
 	perspective: 300px;
 	perspective-origin:center;
 	*/
 	
-}
-.section__item {
+/* } */
+/* .section__item { */
 	/*
 	transform: rotateX(50deg);
 	*/
-}
+/* } */
 
 /*
 3D
@@ -134,12 +134,12 @@ perspective-origin
 додається вісь Z.
 !! вісь Z працює з перспективою
 */
-.section__item {
+/* .section__item { */
 	/* transform: translate3d(20px, 20px, 20px); */
 	/* transform: scale3d(1,1,1); */
 	/* transform: rotate3d(1, 1, 1, 0deg); */
 	/* transform: translate3d(20px, 20px, 20px) scale3d(1, 1, 1); */
-}
+/* } */
 
 /*
 Transform-style
@@ -147,32 +147,32 @@ Transform-style
 відображатися у 3D-просторі.
 ! ! Задається батьківському елементу разом з perspective !
 */
-.section__body {
+/* .section__body { */
 	/*
 	perspective: 300px;
 	transform-style: preserve-3d;
 	*/
-}
-.section__item {
-	/*
+/* } */
+/* .section__item { */
+	/* 
 	transform: rotateY(180deg);
 	transition: all 0.3s ease 0s;
 	*/
-}
-.section__body:hover .section__item{
+/* } */
+/* .section__body:hover .section__item{ */
 	/* 
 	transform: rotateY(0deg);
 	*/
-}
+/* } */
 
 /*
 Backface-visibility
 Відображення зворотного боку об'єкта.
 */
 
-.section__item {
+/* .section__item { */
 	/* backface-visibility: hidden; */
-}
+/* } */
 
 /*
 .expl {
@@ -191,15 +191,15 @@ Backface-visibility
 */
 
 
-.link{
+/* .link{
 	text-transform: uppercase;
 	color: #fff;
 	position: relative;
 	padding-right: 30px;
 	/* Не працює з рядковими */
 	transform: rotate(-20deg);
-}
-.link::before,
+} */
+/* .link::before,
 .link::after{
 	content:"";
 	position: absolute;
@@ -208,28 +208,27 @@ Backface-visibility
 	background-color: #fff;
 	transition: all 0.3s ease 0s;
 	border-radius: 2px;
-}
-.link::before{
+} */
+/* .link::before{
 	top: 5px;
 	right: 0;
 	transform: rotate(45deg);
-}
-.link::after {
+} */
+/* .link::after {
 	top: 5px;
 	right: -12px;
 	transform: rotate(-45deg);
-}
-.link:hover{
+} */
+/* .link:hover{
 	color: red;
-}
-.link:hover::before {
+} */
+/* .link:hover::before {
 	transform: rotate(-45deg);
-}
-.link:hover::after {
+} */
+/* .link:hover::after {
 	transform: rotate(45deg);
-}
+} */
 
-
-.expl:hover .expl__item{
+/* .expl:hover .expl__item{
 	color: red;	
-}
+} */
