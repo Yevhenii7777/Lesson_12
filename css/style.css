@@ -221,7 +221,7 @@ transform: translate3d(30px, 30px, 30px);
 
 .training-transform {
 	position: relative;
-	top: -400px;
+	top: -300px;
 }
 .training-transform__item {
 	width: 150px;
