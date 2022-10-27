@@ -1,7 +1,450 @@
 .wrapper{
-	overflow: hidden;
 	min-height: 100%;
 	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	padding: 60px;
+	background: rgba(155, 155, 155, 0.507);
+}
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 15px;
+	background-color: rgb(164, 167, 158);
+	z-index: 35;
+	text-transform: uppercase;
+}
+.header__container {
+	max-width: fit-content;
+	margin: 0 auto;
+}
+
+.menu {
+	font-size: 0;
+}
+.menu__item {
+	position: relative;
+	display: inline-block;
+}
+.menu__item:not(:last-child){
+	margin-right: 35px;
+}
+.menu__item:hover .sub-menu{
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
+}
+
+.menu__link {
+	font-size: 16px;
+	color: rgb(49, 36, 231);
+	display: inline-block;
+	padding: 5px 0px;
+}
+.sub-menu {
+	background-color: #77608d;
+	padding: 20px;
+	position: absolute;
+	min-width: 180px;
+	top: 130%;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.sub-menu__item:hover {
+	padding-left: 5px;
+	transition: all 0.5s ease 0s;
+	/* transform: rotate(7200deg); */
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.sub-menu__link {
+	font-size: 16px;
+	color: #fff;
+}
+.items__test {
+	text-align: center;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: 700;
+	font-size: 42px;
+	padding: 50px;
+}
+.items__test--bg-brown {
+	background: brown;
+	position: sticky;
+	top: 50px;
+	left: 0;
+	z-index: 25;
+}
+.items__test--bg-blue {
+	background: blue;
+	position: fixed;
+	top: 85px;
+	right: 60px;
+	z-index: 26;
+}
+
+.items__test--bg-gray {
+	background: gray;
+	position: relative;
+	bottom: 160px;
+	left: -30px;
+	z-index: 26;
+}
+.items__test--bg-green {
+	background: green;
+	position: relative;
+	top: 120px;
+	left: 0;
+	z-index: 28;
+	opacity: 0.5;
+	
+}
+.field{
+	height: 100px;
+}
+
+.foto {
+	width: 100%;
+}
+.road{
+	max-width: 2000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.footer-conteiner{
+	text-align: center;
+	color: blueviolet;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	background: rgb(238, 227, 227);
+	line-height: 1.5;
+	font-weight: 700;
+	font-size: 42px;
+	/* position: fixed; */
+	left: 0; 
+	right: 0; 
+	bottom: 0px; 
+	width: 100%; 
+	height: 100%;
+}
+
+.car__container{
+	position: absolute;
+	top: 1100px;
+	left: 600px;
+	}
+
+	.cabin__box {
+	background-color: rgba(40, 40, 226, 0.774);
+	width: 450px;
+	height: 100px;
+	border-radius: 40% 10% 10% 0% / 90% 25% 0% 0%;
+	z-index: 0;
+	position: relative;
+	left: 400px;
+	top: 50px;
+	transition: all 2s ease 0.1s;
+}
+
+[class*="button__link"] {
+/* або такий селектор .button a */
+	display: block;
+	min-height: 20px;
+	max-width: fit-content;
+	margin-bottom: 10px;
+	padding: 5px;
+	background-color: aqua;
+	border-radius: 5px;
+	position: relative;
+	top: -950px;
+}
+
+.cabin__box:target {
+	transition: all 2s ease 0.1s;
+	transform: translate(20%,0%);
+}
+#front-light:target {
+	transition: all 2s ease 0.1s;
+	transform: scale(40%,40%);
+}
+#body__corps:target {
+	transition: all 2s ease 0.1s;
+	transform: rotate(180deg);
+}
+#car__container:target {
+	transition: all 2s ease 0.1s;
+	transform: skew(-10deg, 0deg);
+}
+
+#road:target {
+	transition: all 2s ease 0.1s;
+	transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+}
+#items__test--bg-blue:target {
+	transition: all 2s ease 0.1s;
+	transform-origin: 100% 100%;
+	transform: rotate(720deg);
+}
+
+.wheel2{
+	perspective: 100px;
+	perspective-origin: 0 0;
+}
+#tire:target {
+	transform: rotateX(15deg);
+}
+
+.box__glass3{
+	perspective: 400px;
+}
+#box__item3:target {
+transform: translate3d(30px, 30px, 30px);
+}
+
+#back-light:target{
+	transform: scale3d(1.5, 1.5, 1.5);
+}
+
+.training-transform {
+	position: relative;
+	top: -400px;
+}
+.training-transform__item {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(24, 181, 165, 0.2);
+	perspective: 400px;
+	display: inline-block;
+	margin-right: 15px;
+}
+.training-transform__item--rotate3d,
+.training-transform__item--transform-style,
+.training-transform__item--backface-visibility {
+	background-color: #18b5a4;
+	width: 100%;
+	height: 100%;
+}
+
+.training-transform__item--rotate3d:hover {
+	transform: rotate3d(1, 1, 1, 45deg);
+}
+.training-transform__item--transform-style:hover {
+	transform: rotateY(30deg);
+}
+.training-transform__item--backface-visibility:hover {
+	transform: rotateY(150deg);
+backface-visibility: visible;
+}
+
+.box__glass1 {
+	background: url(../img/taxi2.jpg) 0px 0px /cover no-repeat;
+	width: 150px;
+	height: 85px;
+	display: inline-block;
+	border-radius: 100% 0% 0% 20% / 100% 00% 0% 0%;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	border: 4px solid silver;
+}
+
+.box__item {
+	background-color: rgba(18, 16, 16, 0.959);
+	width: 143px;
+	height: 77px;
+	display: inline-block;
+	border-radius: 100% 0% 0% 20% / 100% 00% 0% 0%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	transition: all 2s ease 0.1s;
+	z-index: 10;
+}
+.taxi {
+	max-width: 150px;
+	position: relative;
+	top: -20px;
+	left: 10px;
+	color:#fff;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	opacity: 0;
+	/* visibility:hidden; */
+}
+.box__glass1:hover .box__item,
+.box__glass1:hover + div {
+	transform: translate(0%, 100%);
+	z-index: 0;
+	opacity: 1;
+	/* visibility:visible; */
+}
+
+.box__glass2 {
+	background: url(../img/rockstar.jpg) 0px 0px /cover no-repeat;
+	width: 120px;
+	height: 85px;
+	display: inline-block;
+	position: relative;
+	top: -104px;
+	left: 175px;
+	border-radius: 4%;
+	border: 4px solid silver;
+}
+.box__item2 {
+	background-color: rgba(18, 16, 16, 0.959);
+	width: 112px;
+	height: 77px;
+	/* position: relative;
+	top: 0px;
+	left: 0px; */
+	transition: all 2s ease 0.1s;
+	z-index: 10;
+}
+.box__glass3 {
+	width: 120px;
+	height: 85px;
+	display: inline-block;
+	position: relative;
+	top: -104px;
+	left: 180px;
+	border-radius: 4%;
+	border: 4px solid silver;
+}
+.box__item3 {
+	background-color: rgba(18, 16, 16, 0.959);
+	width: 112px;
+	height: 77px;
+	/* position: relative;
+	top: 0px;
+	left: 0px; */
+	transition: all 2s ease 0.1s;
+	z-index: 10;
+}
+
+.box__glass2:hover .box__item2 {
+	transform: translate(0%, 100%);
+}
+.box__prop{
+	display: inline-block;
+	width: 4px;
+	height: 100px;
+	position: relative;
+	top: -100px;
+	left: 170px;
+	background-color: silver;
+}
+.body__corps{
+	width: 590px;
+	height: 100px;
+	background-color: yellow;
+	position: relative;
+	top: 45px;
+	left: 260px;
+	border-radius: 28% 0% 20% 10% / 95% 0% 20% 10%;
+	perspective: 40px;
+}
+
+.front-light{
+	width: 55px;
+	height: 35px;
+	border: 5px solid silver;
+	background-color: #fff;
+	position: relative;
+	top: 40px;
+	left: 0px;
+	border-radius: 50% 80% 80% 50% / 95% 80% 80% 80%;
+}
+.back-light{
+	width: 35px;
+	height: 55px;
+	background-color:red;
+	position: relative;
+	top: -30px;
+	left: 555px;
+	}
+.doors{
+	border: 4px solid silver;
+	width: 310px;
+	height: 100px;
+	position: relative;
+	top: -90px;
+	left: 145px;
+	border-radius: 0% 7% 21% 12% / 5% 17% 64% 30%;
+}
+.doors__prop {
+	display: inline-block;
+	width: 4px;
+	height: 98px;
+	position: relative;
+	top: -2px;
+	left: 162px;
+	background-color: silver;
+}
+.doors__handle--one {
+	border: 4px solid silver;
+	width: 25px;
+	height: 4px;
+	position: relative;
+	top: -90px;
+	left: 135px;
+}
+.doors__handle {
+	border: 4px solid silver;
+	width: 25px;
+	height: 4px;
+	position: relative;
+	top: -92px;
+}
+.doors__handle--one {
+	left: 130px;
+}
+.doors__handle--two {
+	border: 4px solid silver;
+	width: 25px;
+	height: 4px;
+	position: relative;
+	top: -100px;
+	left: 270px;
+}
+
+.wheel1{
+	position: relative;
+	top: -190px;
+	left: 0px;
+}
+.wheel2{
+	position: relative;
+	top: -290px;
+	left: 400px;
+}
+.tire{
+	background-color: rgb(255, 255, 255);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	top: 50px;
+	left: 45px;
+	box-shadow: 0px 0px 20px 15px rgb(32 38 33) inset;
+}
+.body__corps:hover .disc {
+	transition: all 5s ease 0s;
+	transform: rotate(-7200deg);
 }
 
 /* 
@@ -9,15 +452,14 @@ body{
 	background-color: #333;
 } */
 
-*/
-За допомогою 2D та 3D трансформації 
+/* За допомогою 2d та 3D трансформації 
 ми зможемо зрушувати, повертати, масштабувати 
 елементи та робити багато іншого!
 Задається трансформація властивістю
-transform та її значеннями
+transform та її значеннями */
 
-!!!!! НЕ ПРАЦЮЄ з рядковими об'єктами !!!!!!!!
-*/
+/* !!!!! НЕ ПРАЦЮЄ з рядковими об'єктами !!!!!!!! */
+
 
 /* .section {
 	padding: 30px;
@@ -196,9 +638,8 @@ Backface-visibility
 	color: #fff;
 	position: relative;
 	padding-right: 30px;
-	/* Не працює з рядковими */
-	transform: rotate(-20deg);
-} */
+	Не працює з рядковими */
+	/* transform: rotate (-20deg); */
 /* .link::before,
 .link::after{
 	content:"";
