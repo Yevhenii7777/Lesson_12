@@ -237,18 +237,22 @@ transform: translate3d(30px, 30px, 30px);
 	background-color: #18b5a4;
 	width: 100%;
 	height: 100%;
-	transition: all 2s ease 0.1s;
 }
 
 .training-transform__item--rotate3d:hover {
+	transition: all 2s ease 0.1s;
 	transform: rotate3d(1, 1, 1, 45deg);
+
 }
 .training-transform__item--transform-style:hover {
+	transition: all 2s ease 0.1s;
 	transform: rotateY(30deg);
+
 }
 .training-transform__item--backface-visibility:hover {
+	transition: all 2s ease 0.1s;
 	transform: rotateY(150deg);
-backface-visibility: visible;
+	backface-visibility: visible;
 }
 
 .box__glass1 {
